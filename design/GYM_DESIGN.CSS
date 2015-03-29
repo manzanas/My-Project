@@ -1,0 +1,297 @@
+body
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+
+	width: 1920px;
+	height: 1080px;
+
+	background: url(gym11.jpg);
+
+	background-repeat: no-repeat;
+}
+
+/************ DIV HEADER ******************/
+/************ DIV HEADER ******************/
+/************ DIV HEADER ******************/
+.HEADER
+{
+	margin: 0px;
+	padding: 0px;
+	margin: 0px;
+	left: 0px;
+
+	position: static;
+	height: 10%;
+	width: 100%;
+	top: 0px;
+
+
+	/*
+
+	background-color: red;
+	opacity: 0.4;
+
+	*/
+	border-bottom: 5px solid #0B5379;
+
+
+}
+.UL_MENU1
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0.5% 0% 0% 0%;
+	
+	list-style: none;
+	text-transform: none;
+	font-weight: 300;
+	font-family: 'Lato', Arial, sans-serif;
+	line-height: 60px;
+	position: static;
+
+	left: 0;
+	width: 100%;
+	height: 60px;
+	font-size: 24px;
+	font-weight: bold;
+	
+	/*
+	background: #ff0018;
+
+	*/
+}
+.UL_MENU1 a
+{
+	font-weight: bold;
+	display: block;
+	height: 100%;
+	color: #FBB351;
+	text-decoration: none;
+	cursor: pointer;
+}
+/*SEPARADOR - RAYA*/
+.UL_MENU1 > li
+{
+
+	display: block;
+	float: left;
+	height: 100%;
+
+	border-right: 5px solid #0B5379;
+	text-align: center;
+	position: relative;
+	top: 25%;
+	opacity: 0.8;
+
+}
+.UL_MENU1 > li > a {
+		padding: 0 30px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+	}
+
+.UL_MENU1:after
+{
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.UL_MENU1> li:last-child {
+		float: right;
+		border-right: none;
+		border-left: 5px solid #0B5379;
+
+}
+
+
+
+
+.UL_MENU1 span
+{
+	font-size: 31px;
+	color: #04779B;
+}
+
+/************ DIV HEADER ******************/
+/************ DIV HEADER ******************/
+/************ DIV HEADER ******************/
+/*
+*
+*
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+*
+*
+*/
+/************ DIV MENU2 ******************/
+/************ DIV MENU2 ******************/
+/************ DIV MENU2 ******************/
+.LEFT
+{
+	margin: 0px;
+	padding: 0px;
+	width: 16%;
+	height: 95%;
+	position: relative;
+	top: -1.5%;
+	left: 0px;
+	
+
+	display: block;
+	border-right: 5px solid #0B5379;
+	border-bottom: 5px solid #0B5379;
+}
+
+.LEFT_NAV
+{
+	margin: 5px;
+	padding: 0px;
+
+	width: 90%;
+	height: 100%;
+
+	
+	position: relative;
+	top: 0%;
+	left: 10px;
+
+	display: block;
+
+}
+
+
+
+.UL_MENU2
+{
+
+	padding-left: 10px;
+
+
+}
+
+.UL_MENU2 li
+{
+	display: block;
+}
+
+
+.UL_MENU2 a
+{
+	font-weight:bold;
+	
+	color: #E6344A;
+	font-size: 21px;
+	text-decoration: none;
+	line-height: 130px;
+	
+
+}
+
+.UL_MENU2 a:hover {
+	background: black;
+	-webkit-border-radius: 710px;
+	-moz-border-radius: 710px;
+	border-radius: 710px;
+}
+
+.UL_MENU2 a:active {
+	background: #afdefa;
+	background: gray;
+	-webkit-border-radius: 710px;
+	-moz-border-radius: 710px;
+	border-radius: 710px;
+}
+/************ DIV MENU2 ******************/
+/************ DIV MENU2 ******************/
+/************ DIV MENU2 ******************/
+/*
+*
+*
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+*
+*
+*//************ DIV MAIN ******************/
+/************ DIV MAIN ******************/
+/************ DIV MAIN ******************/
+.MAIN
+{
+	margin: 5px;
+	padding: 0px;
+
+	width: 67%;
+	height: 95%;
+	position: relative;
+	top: -95%;
+	left: 16%;
+	background-color: orange;
+	opacity: 0.4;
+	display: block;
+	/*
+
+	width: 68%;
+
+	*/
+}
+/************ DIV MAIN ******************/
+/************ DIV MAIN ******************/
+/************ DIV MAIN ******************/
+/*
+*
+*
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+*
+*
+*/
+/************ DIV MENU3 ******************/
+/************ DIV MENU3 ******************/
+/************ DIV MENU3 ******************/
+.RIGHT
+{
+margin: 0px;
+	padding: 0px;
+	width: 16%;
+	height: 95%;
+	position: relative;
+	top: -190%;
+	left: 84%;
+	background-color: yellow;
+	opacity: 0.4;
+}
+/************ DIV MENU3 ******************/
+/************ DIV MENU3 ******************/
+/************ DIV MENU3 ******************/
+/*
+*
+*
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+*
+*
+*/
+/************ DIV FOOTER ******************/
+/************ DIV FOOTER ******************/
+/************ DIV FOOTER ******************/
+.FOOTER
+{
+	margin: 0px;
+	padding: 0px;
+
+	height: 13%;
+	width: 100%;
+
+	position: relative;
+	top: -190%;
+
+	background-color: blue;
+	opacity: 0.5;
+}
+/************ DIV FOOTER ******************/
+/************ DIV FOOTER ******************/
+/************ DIV FOOTER ******************/
