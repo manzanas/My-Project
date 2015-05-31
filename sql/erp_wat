@@ -1,0 +1,89 @@
+drop database water_erp;
+
+create database Water_erp;
+
+
+
+
+
+use water_erp;
+
+create table customers
+(
+id_cust INT NOT NULL AUTO_INCREMENT ,
+nombre 		varchar(80),
+direc 		varchar(500),
+tel 		varchar(10),
+nick 		varchar(15),
+
+PRIMARY KEY (id_cust)
+);
+
+
+create table users
+(
+id_user 	INT NOT NULL AUTO_INCREMENT ,
+nombre 		varchar(80),
+username	varchar(20),
+pwd 		varchar(30),
+PRIMARY KEY (id_user)
+);
+
+CREATE TABLE products
+(
+ id_prod 	INT NOT NULL AUTO_INCREMENT ,
+ name_prod 	varchar(80) NOT NULL,
+ type_prod 	varchar(200),
+ price 		smallint,
+ present	varchar(50),
+ descrip 	varchar(200),
+ PRIMARY KEY (id_prod)
+);
+
+create table sales
+(
+id_sale 	INT NOT NULL AUTO_INCREMENT ,
+folio		varchar(7),
+fecha		date,
+total		smallint,
+user		int,
+cust		int,
+
+ FOREIGN KEY (user) REFERENCES users(id_user),
+ FOREIGN KEY (cust) REFERENCES customers(id_cust),
+ PRIMARY KEY (id_sale)
+);
+
+create table shopping_cars
+(
+id_shop 	INT NOT NULL AUTO_INCREMENT ,
+id_prod		int,
+cant		int,
+mount		smallint,
+sales		int,
+prod		int,
+FOREIGN KEY (sales) REFERENCES sales(id_sale),
+FOREIGN KEY (prod) REFERENCES products(id_prod),
+ PRIMARY KEY (id_shop)
+);
+
+
+create table wharehouses
+(
+id_warh 	INT NOT NULL AUTO_INCREMENT ,
+name_w		varchar(10),
+quantity	smallint,
+stock		varchar(10),
+prod		int,
+cust		int,
+ PRIMARY KEY (id_warh),
+ FOREIGN KEY (cust) REFERENCES customers(id_cust),
+FOREIGN KEY (prod) REFERENCES products(id_prod)
+);
+
+
+
+
+
+
+
