@@ -2,16 +2,12 @@ drop database water_erp;
 
 create database Water_erp;
 
-
-
-
-
 use water_erp;
 
 create table customers
 (
 id_cust INT NOT NULL AUTO_INCREMENT ,
-nombre 		varchar(80),
+nombre 		varchar(80)		not null,
 direc 		varchar(500),
 tel 		varchar(10),
 nick 		varchar(15),
@@ -19,13 +15,13 @@ nick 		varchar(15),
 PRIMARY KEY (id_cust)
 );
 
-
 create table users
 (
 id_user 	INT NOT NULL AUTO_INCREMENT ,
 nombre 		varchar(80),
 username	varchar(20),
 pwd 		varchar(30),
+rol			varchar(10),
 PRIMARY KEY (id_user)
 );
 
@@ -80,6 +76,65 @@ cust		int,
  FOREIGN KEY (cust) REFERENCES customers(id_cust),
 FOREIGN KEY (prod) REFERENCES products(id_prod)
 );
+
+
+
+
+
+use water_erp;
+
+
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('Isaias','puebla ','2223086010','');
+
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('Ines','guadalajara','2227522918','');
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('Edith','tuxtla','2220466926','');
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('Amada','toluca','2220878819','');
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('Alejandro','DF','2229583861','');
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('Gustavo','puebla ','2223817725','');
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('karla','guadalajara','2221191101','');
+
+
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('Alexis','DF','2226309659','');
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('Renata','puebla ','2226661839','');
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('Alexis','guadalajara','2220899418','');
+
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('angel','toluca','2229126013','');
+INSERT INTO customers(nombre, direc, tel, nick) VALUES('elisa','DF','2221792034','');
+
+select * from customers;
+
+
+INSERT INTO users(nombre, username, pwd, rol) VALUES('axel','alexis.100','123456','admin');
+INSERT INTO users(nombre, username, pwd, rol) VALUES('martha','martha.1','123456','user');
+INSERT INTO users(nombre, username, pwd, rol) VALUES('nohemy','nohemy.1','123456','user');
+INSERT INTO users(nombre, username, pwd, rol) VALUES('julio','julio.1','123456','user');
+INSERT INTO users(nombre, username, pwd, rol) VALUES('karla','karla.1','123456','user');
+INSERT INTO users(nombre, username, pwd, rol) VALUES('carlos','carlos.1','123456','user');
+INSERT INTO users(nombre, username, pwd, rol) VALUES('valeria','valeria.1','123456','user');
+INSERT INTO users(nombre, username, pwd, rol) VALUES('gustavo','gustavo.1','123456','user');
+
+
+
+INSERT INTO products(name_prod,price) VALUES('Ciel 500 ml','5');
+INSERT INTO products(name_prod,price) VALUES('Ciel 1l','10');
+INSERT INTO products(name_prod,price) VALUES('Ciel 1.5l','12');
+
+INSERT INTO products(name_prod,price) VALUES('Ciel Jamaica 500ml','7');
+INSERT INTO products(name_prod,price) VALUES('Ciel Jamaica 1l','12');
+INSERT INTO products(name_prod,price) VALUES('Ciel Jamaica 1.5l','14');
+
+
+
+
+select * from products;
+
+
+
+
+
+
+
+
 
 
 
