@@ -107,5 +107,77 @@ public class SQL
     	return flag;
     	
     }
+    
+    
+    
+    ***************************
+    
+    
+    import java.sql.*;
+
+public class SQL
+{
+    
+    private String driver = "com.mysql.jdbc.Driver";
+    private String url = "jdbc:mysql://localhost/Water_erp";
+    private String usr = "prueba";
+    private String pwd = "123456";
+    
+    public Connection getConnection(){
+        
+        
+        Connection cn= null;
+        try {
+            Class.forName(driver);
+            cn = DriverManager.getConnection(url,usr,pwd);
+        }
+        
+        catch(SQLException e){
+            System.out.println(e.toString());
+            cn= null;
+        }
+        
+        catch(Exception e) {
+            System.out.println(e.toString());
+            cn= null;
+        }
+        return cn;
+    }
+    
+    public static void main(String []args)
+    {
+        
+        String driver ="com.mysql.jdbc.Driver";
+        
+        
+        try {
+            Class.forName(driver);
+            Connection con = DriverManager.getConnection ("jdbc:mysql://localhost/Water_erp","prueba", "123456");
+            if(con == null){
+                System.out.println("error");
+            }
+            else{
+                System.out.println("exito");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("exito");
+        }
+        
+        
+        
+        SQL prueba = new SQL();
+        
+        prueba.getConnection();
+        
+        if (prueba.getConnection()!= null )
+        {
+            System.out.println("exito");
+        }
+        else
+            System.out.println("fail");
+    
+    }
+    
 }
 
