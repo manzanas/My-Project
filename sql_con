@@ -112,16 +112,15 @@ public class SQL
     
     ***************************
     
-    
-    import java.sql.*;
+     import java.sql.*;
 
 public class SQL
 {
     
     private String driver = "com.mysql.jdbc.Driver";
     private String url = "jdbc:mysql://localhost/Water_erp";
-    private String usr = "prueba";
-    private String pwd = "123456";
+    private String usr = "root";
+    private String pwd = "MYSQL";
     
     public Connection getConnection(){
         
@@ -152,17 +151,18 @@ public class SQL
         
         try {
             Class.forName(driver);
-            Connection con = DriverManager.getConnection ("jdbc:mysql://localhost/Water_erp","prueba", "123456");
+            Connection con = DriverManager.getConnection ("jdbc:mysql://localhost/Water_erp","root","MYSQL");
             if(con == null){
                 System.out.println("error");
             }
             else{
-                System.out.println("exito");
+                System.out.println("exito_main");
             }
         }
         catch (Exception e) {
-            System.out.println("exito");
+            System.out.println("error: " + e);
         }
+        
         
         
         
@@ -172,7 +172,7 @@ public class SQL
         
         if (prueba.getConnection()!= null )
         {
-            System.out.println("exito");
+            System.out.println("exito_clase");
         }
         else
             System.out.println("fail");
@@ -180,4 +180,3 @@ public class SQL
     }
     
 }
-
