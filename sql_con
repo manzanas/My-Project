@@ -1,0 +1,111 @@
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+
+public class Conexion {
+	
+	private String driver = "com.mysql.jdbc.Driver";
+	private String url = "jdbc:mysql://localhost/Water_erp";
+	private String usr = "root";
+	private String pwd = "MYSQL";
+	
+	
+	public Connection getConnection(){
+		
+		Connection cn= null;
+		
+		try {
+			Class.forName(driver);
+			cn = DriverManager.getConnection(url,usr,pwd);
+		}
+		
+		catch(SQLException e){
+			System.out.println(e.toString());
+			cn= null;
+		}
+		catch(Exception e) {
+			System.out.println(e.toString());
+			cn= null;
+		}
+		return cn;
+    }
+    
+    public static void main(String []args)
+    {
+        Conexion prueba = new Conexion();
+        
+        prueba.getConnection();
+        
+        if (prueba.getConnection()!= null )
+        {
+            System.out.println("exito");
+        }
+        else
+            System.out.println("fail");
+    }
+}
+
+
+
+
+import java.sql.*;
+
+
+public class SQL
+{
+    // Ejecuta Insert, Delete y Update. Retorna null si todo bien, caso contrario, el mensaje de error
+    static public String ejecuta(String sql)
+    {
+        String mensaje= null;
+        try
+        {
+            Conexion 	db = new Conexion();//Llamamos a nuestra Clase Conexion
+            Connection	cn = db.getConnection();
+
+            if (cn == null) {
+            	mensaje = "No hay conexiÃ³n a la base de datos...!";
+            } else {
+            	Statement st = cn.createStatement();//Obtiene procedimiento o consulta
+            	st.execute(sql);//Ejecuta Consulta
+            	st.close();
+            	cn.close();
+            }
+        } catch(SQLException e)	{
+            mensaje= e.getMessage();
+        } catch(Exception e) {
+            mensaje= e.getMessage();
+        }
+
+        return mensaje;
+    }
+    
+    static public boolean query(String sql)
+    {
+    	boolean flag = false;
+    	
+    	try
+        {
+            Conexion 	db = new Conexion();
+            Connection	cn = db.getConnection();
+
+            if (cn == null) {
+            	flag = false;
+            } else {
+            	Statement st = cn.createStatement();//Obtiene procedimiento o consulta
+            	st.execute(sql);//Ejecuta Consulta
+            	st.close();
+            	cn.close();
+            	flag = true;
+            }
+        } catch(SQLException e)	{
+            System.out.println(e.toString());
+        } catch(Exception e) {
+        	System.out.println(e.toString());
+        }
+    	
+    	return flag;
+    	
+    }
+}
+
