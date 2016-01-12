@@ -2,8 +2,7 @@ import java.sql.*;
 
 
 public class Conexion{
-    
-    
+	
     String driver = "com.mysql.jdbc.Driver";
     private String url = "jdbc:mysql://localhost/myDataBase";
     private String user = "root";
