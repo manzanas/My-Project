@@ -5,9 +5,9 @@ public class Conexion{
     
     
     String driver = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost/Water_erp";
+    private String url = "jdbc:mysql://localhost/myDataBase";
     private String user = "root";
-    private String pwd = "";
+    private String pwd = "root";
     
     
     public Connection getConnection(){
